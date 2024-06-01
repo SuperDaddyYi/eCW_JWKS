@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap; /* Ensures that the text wraps correctly */
+        }
+    </style>
+</head>
+<body>
+    <pre id="jsonDisplay"></pre>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const jsonData = {
+               
+    "keys": [
+      {
+          "kty": "RSA",
+          "alg": "RS384",
+          "n": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0UL97Pz5vD8pvjqsaTP0i969gZE/arqKzVCGPxidpTexeKYqhRtR+yIzjepIlJqkdAzQXZ34DDcbBFo24xR2To3VcFxJyrkwRJYq6/LmZdlZlx0dKoSW8z14E3eo39tCcgIJMwR+m6lpD076YqGEaYmj+kbGp5TC4vebVqH9tyP2YE0nDir99gFf+BCn4XeU8O7aqt/LQPY4nC+7y0waERGva3orgGdOBe3DYF0Dzvi49F4IaoSHH6r0gMHzfQWQCxVTIYpDlzWHImoteTm9iwDTJ6EnZFEM6p+30QiGZ8OjLQbVpCz8ffokGEPGJc2ZDNcXsVpf6PoHziBpe72L+wIDAQAB",
+          "e": "AQAB",
+          "use": "sig",
+          "key_ops": [
+              "verify"
+          ],
+          "ext": true,
+          "kid": "b42349b6f37a9500edb8a905a595qdd7"
+      }
+  ]
+            };
+
+            document.getElementById('jsonDisplay').textContent = JSON.stringify(jsonData, null, 2);
+        });
+    </script>
+</body>
+</html>
